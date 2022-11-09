@@ -38,12 +38,10 @@ const Login = props => {
   useEffect(() => {
     if(emailInput.trim().length > 0) {
       const timer = setTimeout(() => {
-        console.log("Validating email...");
           setEmailIsValid(emailInput.includes('@') && emailInput.includes('.'))
       }, 1000);
 
       return () => {
-        console.log("Clear email validation...");
         clearTimeout(timer)
       }
     } else {
@@ -54,12 +52,10 @@ const Login = props => {
   useEffect(() => {
     if(passwordInput.trim().length > 0) {
       const timer = setTimeout(() => {
-        console.log("Validating password...");
         setPasswordIsValid(passwordInput.trim().length > 5);
       }, 500);
 
       return () => {
-        console.log("Clear pasword validation...");
         clearTimeout(timer)
       }
     } else {
