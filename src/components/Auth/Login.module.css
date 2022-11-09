@@ -1,0 +1,66 @@
+h1 {
+  margin: 0;
+}
+
+.input-component {
+  position: relative;
+  margin: 2.5rem 0;
+  width: 300px;
+}
+
+.input-component input {
+  padding: 0.5rem;
+  border: 0;
+  border-bottom: 2px solid white;
+  border-radius: 2px;
+  background-color: transparent;
+  width: 100%;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.input-component .validation-message {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgb(190, 190, 255);
+}
+
+.input-component.invalid input {
+  border-bottom: 2px solid rgb(255, 94, 0);
+}
+
+.input-component input:focus {
+  outline: 0;
+  border-bottom-color: rgb(190, 190, 255);
+}
+
+.input-component label {
+  position: absolute;
+  cursor: text;
+  top: 2px;
+  left: 12px;
+}
+
+.input-component > label span {
+  display: inline-block;
+  font-size: 1.2rem;
+  min-width: 5px;
+  transition: 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.input-component input:focus + label span,
+.input-component input:valid + label span {
+  color: rgb(190, 190, 255);
+  transform: translateY(-30px); 
+  cursor: default;
+}
+
+.input-component.invalid input:focus + label span,
+.input-component.invalid input:valid + label span {
+  color: rgb(255, 94, 0);
+}
+
+.input-component.invalid input:focus,
+.input-component.invalid input:valid {
+  border-color: rgb(255, 64, 11);
+}
