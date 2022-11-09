@@ -8,9 +8,8 @@ A React login app made to demonstrate how we can optimize a form/input validatio
 
 ### Goal
 
-My Goal for this app was to implement debounce by my own in order to practice what I've learned in React. The app's CSS was inspired by a similar app made with Vanilla JavaScript by the Youtube channel <a href="https://www.youtube.com/c/TraversyMedia" target="_blank">Traversy Media</a>. This was a perfect opportunity to put in place something like this, since I had to implement React by my own.
+My Goal for this app was to implement debounce by my own in order to practice what I've learned in React. The app's CSS was inspired by a similar app made with Vanilla JavaScript by the Youtube channel [Traversy Media](https://www.youtube.com/c/TraversyMedia) <i>(open in new tab: CTRL+click on Windows/Linux or Command+click on MacOS)</i>. This was a perfect opportunity to put in place something like this, since I had to implement React by my own.
 
 ### Link to project
 
-<a href="https://react-login-demo-827a9.web.app/" target="_blank">Open link</a> on new tab.
-
+[Link](https://react-login-demo-827a9.web.app/) <i>(open in new tab: CTRL+click on Windows/Linux or Command+click on MacOS)</i>.
