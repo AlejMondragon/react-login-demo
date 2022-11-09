@@ -3,7 +3,6 @@ import Button from "../UI/Button"
 import Card from "../UI/Card"
 import classes from "./Login.module.css"
 
-// ** FOR STYLING PURPOSES ONLY **
 const spanEmailStyling = (
   <>
     <span style={{transitionDelay: "0.1s"}}>E</span>
@@ -14,7 +13,6 @@ const spanEmailStyling = (
   </>
 )
 
-// ** FOR STYLING PURPOSES ONLY **
 const spanPswStyling = (
   <>
     <span style={{transitionDelay: "0.1s"}}>P</span>
@@ -29,7 +27,6 @@ const spanPswStyling = (
 )
 
 const Login = props => {
-  // ** FOR STYLING PURPOSES ONLY **
   const emailInputRef = useRef(null)
   const passwordInputRef = useRef(null)
   
@@ -45,7 +42,6 @@ const Login = props => {
           setEmailIsValid(emailInput.includes('@') && emailInput.includes('.'))
       }, 1000);
 
-      // return a function in useEffect, it will run before the rest of the code
       return () => {
         console.log("Clear email validation...");
         clearTimeout(timer)
@@ -62,7 +58,6 @@ const Login = props => {
         setPasswordIsValid(passwordInput.trim().length > 5);
       }, 500);
 
-      // return a function in useEffect, it will run before the rest of the code
       return () => {
         console.log("Clear pasword validation...");
         clearTimeout(timer)
@@ -80,11 +75,10 @@ const Login = props => {
     setPasswordInput(event.target.value)
   }
 
-  // ** FOR STYLING PURPOSES ONLY **
   const emailInputFocusHandler = () => {
     emailInputRef.current.focus()
   }
-  // ** FOR STYLING PURPOSES ONLY **
+  
   const passwordInputFocusHandler = () => {
     passwordInputRef.current.focus()
   }
