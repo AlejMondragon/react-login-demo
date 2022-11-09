@@ -3,15 +3,15 @@ import Login from "./components/Auth/Login";
 import Logout from "./components/Auth/Logout";
 
 function App() {
-  const [auth, setAuth] = useState(false)
+  const [isAuth, setIsAuth] = useState(false)
 
   const authHandler = () => {
-    setAuth(prevAuth => !prevAuth)
+    setIsAuth(prevAuth => !prevAuth)
   }
 
   return (
     <React.Fragment>
-      {!auth ? <Login onLogin={authHandler} /> : <Logout onLogout={authHandler} />}
+      {!isAuth ? <Login onLogin={authHandler} /> : <Logout onLogout={authHandler} />}
     </React.Fragment>
   );
 }

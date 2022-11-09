@@ -71,17 +71,17 @@ const Login = props => {
     setPasswordInput(event.target.value)
   }
 
-  const emailInputFocusHandler = () => {
+  const emailLabelFocusInputHandler = () => {
     emailInputRef.current.focus()
   }
   
-  const passwordInputFocusHandler = () => {
+  const passwordLabelFocusInputHandler = () => {
     passwordInputRef.current.focus()
   }
 
   const submitHandler = event => {
     event.preventDefault()
-    console.log(emailIsValid && passworIsValid);
+
     if(emailIsValid && passworIsValid) {
       props.onLogin()
     }
@@ -89,7 +89,7 @@ const Login = props => {
 
   return (
     <Card>
-        <h1>Log In</h1>
+        <h1>Login</h1>
         <form onSubmit={submitHandler}>
           <div className={`${classes["input-component"]} ${emailIsValid === false ? classes["invalid"] : "" }`}>
             <input 
@@ -98,7 +98,7 @@ const Login = props => {
               onChange={emailInputHandler}
               required
             />
-            <label onClick={emailInputFocusHandler}>{spanEmailStyling}</label>
+            <label onClick={emailLabelFocusInputHandler}>{spanEmailStyling}</label>
             {emailIsValid === false && <p className={classes["validation-message"]}>Please enter a valid Email.</p>}
           </div>
           <div className={`${classes["input-component"]} ${passworIsValid === false ? classes["invalid"] : "" }`}>
@@ -108,7 +108,7 @@ const Login = props => {
             onChange={passwordInputHandler}
             required
             />
-            <label onClick={passwordInputFocusHandler}>{spanPswStyling}</label>
+            <label onClick={passwordLabelFocusInputHandler}>{spanPswStyling}</label>
             {passworIsValid === false && <p className={classes["validation-message"]}>Password must be {">"} 5.</p>}
           </div>
           <Button type={"submit"}>Log In</Button>

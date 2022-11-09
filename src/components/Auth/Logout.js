@@ -5,7 +5,7 @@ const Logout = props => {
   return (
     <Card>
       <h1>Logout</h1>
-      <Button onClick={props.onLogout}>Logout</Button>
+      <Button onClick={props.onLogout}>Log out</Button>
     </Card>
   )
 }
